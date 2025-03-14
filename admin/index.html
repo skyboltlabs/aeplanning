@@ -6,24 +6,6 @@
     <script src="https://cdn.jsdelivr.net/npm/netlify-cms@2.10.175/dist/netlify-cms.min.js"></script>
 </head>
 <body>
-    <!-- CMS will load here -->
-    <div id="product-list"></div>
-
-<script>
-  fetch('/content/products/index.json')
-    .then(response => response.json())
-    .then(data => {
-      const productList = document.getElementById('product-list');
-      productList.innerHTML = data.map(product => `
-        <div class="product">
-          <h3>${product.name}</h3>
-          <img src="${product.image}" alt="${product.name}">
-          <p>${product.description}</p>
-          <strong>Price: ${product.price}</strong>
-        </div>
-      `).join('');
-    });
-</script>
-
+    <!-- Netlify CMS will load here -->
 </body>
 </html>
