@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: skyboltlabs/aeplanning
+  branch: main # or 'master'
+
+media_folder: "img/uploads"
+public_folder: "/img/uploads"
+
+collections:
+  - name: "products"
+    label: "Products"
+    folder: "content/products"
+    create: true
+    slug: "{{fields.name}}"
+    fields:
+      - { name: "name", label: "Product Name", widget: "string" }
+      - { name: "price", label: "Price", widget: "string" }
+      - { name: "image", label: "Image", widget: "image" }
+      - { name: "description", label: "Description", widget: "text" }
